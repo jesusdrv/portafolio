@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #212121;
+}
+
+header {
+    width: 80px;
+    position: fixed;
+    z-index: 9;
+    .content {
+        height: 100vh;
+        padding: 20px 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 3px 1px 12px 0px rgba(255,255,255,1);
+        a {
+            display: flex;
+            align-items: center;
+        }
+        .contentImgLogo {
+            .logoBlue {
+                width: 70px;
+            }
+        }
+        nav {
+            width: 100%;
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                gap: 25px;
+                padding: 0px;
+                align-items: center;
+                li {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    a {
+                        text-decoration: none;
+                        width: 100%;
+                        .option {
+                            width: 100%;
+                            text-align: center;
+                            line-height: 13px;
+                            position: relative;
+                            left: 0;
+                            padding-bottom: 5px;
+                            .icon {
+                                font-size: 30px;
+                                background-color: transparent;
+                            }
+                            p {
+                                font-family: josefin Sans;
+                                font-size: 13px;
+                                color: white;
+                            }
+                        }
+                        .inicio:hover, .estudios:hover, .Proyectos:hover, .formulario:hover, .idioma:hover {
+                            &::after {
+                                content: attr(data-tooltip);
+                                position: absolute; 
+                                background-color: black; 
+                                color: white; 
+                                padding: 5px 10px; 
+                                border-radius: 5px;
+                                bottom: 100%; 
+                                transform: translateX(-75%); 
+                                white-space: nowrap; 
+                                opacity: 1; 
+                                transition: opacity 3.3s ease; 
+                            }
+                        }
+                    }
+                    #home:hover {
+                        background-color: #01c4e7;  
+                        .inicio:hover {
+                            background-color: #01c4e7;  
+                        }
+                    }
+                    #studies:hover {
+                        background-color: #2b97fa;
+                        .estudios:hover {
+                            background-color: #2b97fa;
+                        } 
+                    }
+                   #jobs:hover {
+                        background-color: #6664ff;
+                       .Proyectos:hover {
+                           background-color: #6664ff;
+                       } 
+                   }
+                   #form:hover {
+                       background-color: #9a27f7;
+                        .formulario:hover {
+                            background-color: #9a27f7;
+                        }
+                   }
+                   #lenguajes:hover {
+                    background-color: #c501e2;
+                       .idioma:hover {
+                        background-color: #c501e2;
+                       }
+                   }
+                }
+            }
+        }
+        .blockOne {
+            padding: 0 10px;
+            .socialMedia {
+                 .github, .whatsapp, .linkedin {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .icon {
+                        font-size: 30px;
+                        transition: all .5s ease;
+                    }
+                    &:hover {
+                        .icon {
+                            font-size: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 70px;
+    }
+}
+

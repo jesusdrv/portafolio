@@ -1,0 +1,64 @@
+.page-container {
+    h1 {
+        padding: 1rem 1rem 0 6rem;
+        color: #1eff05;
+        letter-spacing: 0.2rem;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    .cardContainer {
+        padding: 1rem 1rem 1rem 6rem;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        height: 100vh;
+        .card {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .backgroundBlack {
+                background-color: #212121cc;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transition: all .3s ease;
+                p {
+                font-family: "Noto Sans", sans-serif;
+                padding: .5rem;
+                position: absolute;
+                background-color: transparent;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                }
+            }
+            &:hover {
+                .backgroundBlack {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+//MediaQuery
+
+@media (max-width: 1080px) {
+    .page-container {
+        .cardContainer {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .page-container {
+        .cardContainer {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
