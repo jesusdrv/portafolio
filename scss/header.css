@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #212121;
+}
+
+header {
+  width: 80px;
+  position: fixed;
+  z-index: 9;
+}
+header .content {
+  height: 100vh;
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 3px 1px 12px 0px rgb(255, 255, 255);
+}
+header .content a {
+  display: flex;
+  align-items: center;
+}
+header .content .contentImgLogo .logoBlue {
+  width: 70px;
+}
+header .content nav {
+  width: 100%;
+}
+header .content nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 25px;
+  padding: 0px;
+  align-items: center;
+}
+header .content nav ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .content nav ul li a {
+  text-decoration: none;
+  width: 100%;
+}
+header .content nav ul li a .option {
+  width: 100%;
+  text-align: center;
+  line-height: 13px;
+  position: relative;
+  left: 0;
+  padding-bottom: 5px;
+}
+header .content nav ul li a .option .icon {
+  font-size: 30px;
+  background-color: transparent;
+}
+header .content nav ul li a .option p {
+  font-family: josefin Sans;
+  font-size: 13px;
+  color: white;
+}
+header .content nav ul li a .inicio:hover::after, header .content nav ul li a .estudios:hover::after, header .content nav ul li a .Proyectos:hover::after, header .content nav ul li a .formulario:hover::after, header .content nav ul li a .idioma:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 100%;
+  transform: translateX(-75%);
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 3.3s ease;
+}
+header .content nav ul li #home:hover {
+  background-color: #01c4e7;
+}
+header .content nav ul li #home:hover .inicio:hover {
+  background-color: #01c4e7;
+}
+header .content nav ul li #studies:hover {
+  background-color: #2b97fa;
+}
+header .content nav ul li #studies:hover .estudios:hover {
+  background-color: #2b97fa;
+}
+header .content nav ul li #jobs:hover {
+  background-color: #6664ff;
+}
+header .content nav ul li #jobs:hover .Proyectos:hover {
+  background-color: #6664ff;
+}
+header .content nav ul li #form:hover {
+  background-color: #9a27f7;
+}
+header .content nav ul li #form:hover .formulario:hover {
+  background-color: #9a27f7;
+}
+header .content nav ul li #lenguajes:hover {
+  background-color: #c501e2;
+}
+header .content nav ul li #lenguajes:hover .idioma:hover {
+  background-color: #c501e2;
+}
+header .content .blockOne {
+  padding: 0 10px;
+}
+header .content .blockOne .socialMedia .github, header .content .blockOne .socialMedia .whatsapp, header .content .blockOne .socialMedia .linkedin {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .content .blockOne .socialMedia .github .icon, header .content .blockOne .socialMedia .whatsapp .icon, header .content .blockOne .socialMedia .linkedin .icon {
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+header .content .blockOne .socialMedia .github:hover .icon, header .content .blockOne .socialMedia .whatsapp:hover .icon, header .content .blockOne .socialMedia .linkedin:hover .icon {
+  font-size: 45px;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 70px;
+  }
+}/*# sourceMappingURL=header.css.map */
